@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "kevins-cozy-corner",
+	"version": "${version}",
+	"name": "Kevin's Cozy Corner – An Enderman Plushie",
+	"description": "Meet Kevin the Endermate, your tiny, grass-block-loving buddy, always holding his beloved grass block. Place him anywhere to bring a little Enderman charm into your Minecraft world!",
+	"authors": [
+		"Zabeenia"
+	],
+	"contact": {
+		"homepage": "https://github.com/Zabeenia/kevins-cozy-corner",
+		"sources": "https://github.com/Zabeenia/kevins-cozy-corner"
+	},
+	"license": "ARR",
+	"icon": "assets/kevins-cozy-corner/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"zabeenia.kevinscozycorner.KevinSCozyCornerAnEndermanPlushie"
+		],
+		"client": [
+			"zabeenia.kevinscozycorner.client.KevinSCozyCornerAnEndermanPlushieClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "BGB",
+    " G "
+  ],
+  "key": {
+    "P": "minecraft:purple_dye",
+    "B": "minecraft:black_wool",
+    "G": "minecraft:gray_wool"
+  },
+  "result": {
+    "id": "kevins-cozy-corner:kevin_plush",
+    "count": 1
+  }
+}
