@@ -12,12 +12,13 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jspecify.annotations.Nullable;
+import org.jspecify.annotations.NullMarked;
 import net.minecraft.world.level.block.state.properties.RotationSegment;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
-
+@NullMarked
 public class KevinPlushBlock extends Block {
 
     private static final VoxelShape SHAPE =
