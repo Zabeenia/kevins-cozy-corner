@@ -1,3 +1,4 @@
+
 package zabeenia.kevinscozycorner;
 
 import net.minecraft.resources.ResourceKey;
@@ -7,7 +8,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.resources.Identifier;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 
@@ -17,6 +17,7 @@ public class ModBlocks {
                     Registries.BLOCK,
                     KevinSCozyCornerAnEndermanPlushie.id("kevin_plush")
             );
+
     public static KevinPlushBlock KEVIN_PLUSH;
 
     public static void registerModBlocks() {
@@ -33,26 +34,24 @@ public class ModBlocks {
                 KEVIN_PLUSH
         );
 
+        ResourceKey<Item> itemKey = ResourceKey.create(
+                Registries.ITEM,
+                KevinSCozyCornerAnEndermanPlushie.id("kevin_plush")
+        );
+
         Registry.register(
                 BuiltInRegistries.ITEM,
-                ResourceKey.create(
-                        Registries.ITEM,
-                        Identifier.fromNamespaceAndPath("kevins-cozy-corner", "kevin_plush")
-                ),
+                itemKey,
                 new BlockItem(
                         KEVIN_PLUSH,
-                        new Item.Properties().setId(
-                                ResourceKey.create(
-                                        Registries.ITEM,
-                                        Identifier.fromNamespaceAndPath("kevins-cozy-corner", "kevin_plush")
-                                )
-                        )
+                        new Item.Properties().setId(itemKey)
                 )
         );
+
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS)
                 .register(entries -> entries.accept(
                         BuiltInRegistries.ITEM.getValue(
-                                Identifier.fromNamespaceAndPath("kevins-cozy-corner", "kevin_plush")
+                                KevinSCozyCornerAnEndermanPlushie.id("kevin_plush")
                         )
                 ));
     }
